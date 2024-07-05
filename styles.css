@@ -1,0 +1,109 @@
+@font-face {
+    font-family: 'Cross Stitch';
+    src: url('fonts/CrossStitch.ttf') format('truetype'); 
+}
+
+body {
+    font-family: 'Cross Stitch';
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    color: #fff;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #000;
+    text-align: center;
+}
+
+h1 {
+    position: relative;
+    color: #0096FF;
+    font-size: 48px;
+    animation: glow-blue 1s ease-in-out infinite alternate;
+}
+
+h2 {
+    position: relative;
+    color: #FF0000;
+    font-size: 35px;
+    animation: glow-red 1s ease-in-out infinite alternate;
+}
+
+p {
+    font-family: 'VT323', monospace;
+    font-size: 24px;
+    color: #ffffff;
+}
+
+.test {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #000;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+button {
+    flex: 1;
+    padding: 10px;
+    margin: 5px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+button.positive {
+    background-color: #4747fd;
+    color: #fff;
+}
+
+button.negative {
+    background-color: #ff5555;
+    color: #fff;
+}
+
+button.both {
+    background-color: #00ff66;
+    color: #000;
+}
+
+button.envio {
+    background-color: #fcb3ff;
+}
+
+@media (max-width: 600px) {
+    .buttons {
+        flex-direction: column;
+    }
+
+    button {
+        margin: 5px 0;
+    }
+}
+
+@keyframes glow-blue {
+    0% {
+        text-shadow: 0 0 2px #0096FF, 0 0 4px #0096FF, 0 0 6px #0096FF, 0 0 8px #0096FF;
+    }
+    100% {
+        text-shadow: 0 0 4px #00FFFF, 0 0 6px #00FFFF, 0 0 8px #00FFFF, 0 0 10px #00FFFF;
+    }
+}
+
+@keyframes glow-red {
+    0% {
+        text-shadow: 0 0 2px #FF0000, 0 0 4px #FF0000, 0 0 6px #FF0000, 0 0 8px #FF0000;
+    }
+    100% {
+        text-shadow: 0 0 4px #FF4500, 0 0 6px #FF4500, 0 0 8px #FF4500, 0 0 10px #FF4500;
+    }
+}
