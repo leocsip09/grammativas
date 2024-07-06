@@ -4,33 +4,44 @@
 }
 
 body {
-    font-family: 'Cross Stitch';
+    font-family: 'Cross Stitch', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #582b74;
     background-image: url('images/bacilos-pattern.jpg');
     background-size: cover;
-    color: #fff;
+    color: #73228e;
+    position: relative; 
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.91); 
+    z-index: -1; 
 }
 
 .container {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
-    background-color: rgba(77, 21, 112, 0.564); 
+    background-color: rgba(73, 30, 100, 0.4);
     text-align: center;
-    border-radius: 15px; 
+    border-radius: 30px;
+    position: relative; 
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); 
 }
 
 h1 {
-    position: relative;
-    color: #0096FF;
+    color: #7bceff;
     font-size: 48px;
     animation: glow-blue 1s ease-in-out infinite alternate;
 }
 
 h2 {
-    position: relative;
     color: #ff7777;
     font-size: 35px;
     animation: glow-red 1s ease-in-out infinite alternate;
@@ -45,8 +56,8 @@ p {
 .test {
     margin-top: 20px;
     padding: 10px;
-    background-color: rgba(65, 26, 89, 0.479); 
-    border-radius: 15px; 
+    background-color: rgba(52, 30, 114, 0.318); 
+    border-radius: 40px; 
 }
 
 .buttons {
@@ -59,18 +70,18 @@ p {
 button {
     font-family: 'VT323', monospace;
     flex: 1 1 calc(33.333% - 10px); 
-    padding: 10px;
-    margin: 5px;
+    padding: 15px;
+    margin: 10px;
     border: none;
     border-radius: 10px;
     cursor: pointer;
     font-size: 24px;
     transition: background-color 0.3s ease, transform 0.2s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.558); 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); 
 }
 
 button:hover {
-    transform: translateY(-2px); 
+    transform: translateY(-3px); 
 }
 
 button:active {
@@ -107,29 +118,44 @@ button.both.selected {
 button.envio {
     background-color: #fcb3ff;
     color: #000;
+    padding: 15px 30px;
+    font-size: 28px;
+    border-radius: 20px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 button.envio:hover {
     background-color: #e0a1e6;
 }
 
-@media (max-width: 600px) {
+.resultados {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: rgba(65, 26, 89, 0.7); 
+    border-radius: 20px; 
+    color: #ffffff; 
+    font-size: 20px;
+}
+
+@media (max-width: 768px) {
     .buttons {
         flex-direction: column;
+        align-items: center;
     }
-
+    
     button {
-        flex: 1 1 100%; 
-        margin: 5px 0;
+        flex: 1 1 calc(50% - 20px); 
+        margin: 10px;
     }
 }
 
 @keyframes glow-blue {
     0% {
-        text-shadow: 0 0 2px #0096FF, 0 0 4px #0096FF, 0 0 6px #0096FF, 0 0 8px #0096FF;
+        text-shadow: 0 0 2px #0a63a2, 0 0 4px #0a63a2, 0 0 6px #0a63a2, 0 0 8px #0a63a2;
     }
     100% {
-        text-shadow: 0 0 4px #00FFFF, 0 0 6px #00FFFF, 0 0 8px #00FFFF, 0 0 10px #00FFFF;
+        text-shadow: 0 0 4px #0a63a2, 0 0 6px #0a63a2, 0 0 8px #0a63a2, 0 0 10px #0a63a2;
     }
 }
 
@@ -138,6 +164,9 @@ button.envio:hover {
         text-shadow: 0 0 2px #d30000, 0 0 4px #d30000, 0 0 6px #d30000, 0 0 8px #d30000;
     }
     100% {
-        text-shadow: 0 0 2px #FF4500, 0 0 4px #FF4500, 0 0 8px #FF4500, 0 0 9px #FF4500;
+        text-shadow: 0 0 2px #d30000, 0 0 4px #d30000, 0 0 8px #d30000, 0 0 9px #d30000;
     }
+}
+html {
+    scroll-behavior: smooth; 
 }
