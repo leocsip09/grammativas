@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function () {
             button.addEventListener('click', function () {
                 buttons.forEach(btn => btn.classList.remove('selected'));
                 this.classList.add('selected');
-                selections[index] = buttonIndex; // Store the actual value (0, 1, or 2)
+                selections[index] = buttonIndex; 
             });
         });
     });
