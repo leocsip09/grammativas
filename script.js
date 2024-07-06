@@ -115,4 +115,17 @@ document.addEventListener('DOMContentLoaded', function () {
             resultsDiv.innerHTML = '<p>No se encontraron coincidencias.</p>';
         }
     });
+
+    const limpiarButton = document.querySelector('.limpiar');
+    limpiarButton.addEventListener('click', function () {
+        buttonGroups.forEach(group => {
+            const buttons = group.querySelectorAll('button');
+            buttons.forEach(button => {
+                button.classList.remove('selected');
+            });
+        });
+
+        const resultsDiv = document.querySelector('.resultados');
+        resultsDiv.innerHTML = '';
+    });
 });
