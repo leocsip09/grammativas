@@ -7,7 +7,9 @@ body {
     font-family: 'Cross Stitch';
     margin: 0;
     padding: 0;
-    background-color: #000;
+    background-color: #582b74;
+    background-image: url('images/bacilos-pattern.jpg');
+    background-size: cover;
     color: #fff;
 }
 
@@ -15,8 +17,9 @@ body {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
-    background-color: #000;
+    background-color: rgba(77, 21, 112, 0.564); 
     text-align: center;
+    border-radius: 15px; 
 }
 
 h1 {
@@ -28,7 +31,7 @@ h1 {
 
 h2 {
     position: relative;
-    color: #FF0000;
+    color: #ff7777;
     font-size: 35px;
     animation: glow-red 1s ease-in-out infinite alternate;
 }
@@ -42,42 +45,72 @@ p {
 .test {
     margin-top: 20px;
     padding: 10px;
-    background-color: #000;
+    background-color: rgba(65, 26, 89, 0.479); 
+    border-radius: 15px; 
 }
 
 .buttons {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap; 
     margin-top: 10px;
 }
 
 button {
-    flex: 1;
+    font-family: 'VT323', monospace;
+    flex: 1 1 calc(33.333% - 10px); 
     padding: 10px;
     margin: 5px;
     border: none;
     border-radius: 10px;
     cursor: pointer;
     font-size: 24px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.558); 
+}
+
+button:hover {
+    transform: translateY(-2px); 
+}
+
+button:active {
+    transform: translateY(0); 
 }
 
 button.positive {
-    background-color: #4747fd;
+    background-color: #7a7a7a;
     color: #fff;
+}
+
+button.positive.selected {
+    background-color: #3b3bf0;
 }
 
 button.negative {
-    background-color: #ff5555;
+    background-color: #7a7a7a;
     color: #fff;
 }
 
+button.negative.selected {
+    background-color: #e04b4b;
+}
+
 button.both {
-    background-color: #00ff66;
-    color: #000;
+    background-color: #7a7a7a;
+    color: #ffffff;
+}
+
+button.both.selected {
+    background-color: #00b448;
 }
 
 button.envio {
     background-color: #fcb3ff;
+    color: #000;
+}
+
+button.envio:hover {
+    background-color: #e0a1e6;
 }
 
 @media (max-width: 600px) {
@@ -86,6 +119,7 @@ button.envio {
     }
 
     button {
+        flex: 1 1 100%; 
         margin: 5px 0;
     }
 }
@@ -101,9 +135,9 @@ button.envio {
 
 @keyframes glow-red {
     0% {
-        text-shadow: 0 0 2px #FF0000, 0 0 4px #FF0000, 0 0 6px #FF0000, 0 0 8px #FF0000;
+        text-shadow: 0 0 2px #d30000, 0 0 4px #d30000, 0 0 6px #d30000, 0 0 8px #d30000;
     }
     100% {
-        text-shadow: 0 0 4px #FF4500, 0 0 6px #FF4500, 0 0 8px #FF4500, 0 0 10px #FF4500;
+        text-shadow: 0 0 2px #FF4500, 0 0 4px #FF4500, 0 0 8px #FF4500, 0 0 9px #FF4500;
     }
 }
